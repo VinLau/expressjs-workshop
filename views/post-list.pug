@@ -1,0 +1,19 @@
+extends layout.pug
+
+block title
+    title TopReddits!
+
+block content
+    div(id="posts")
+        h1 list of posts
+        ul(class="posts-list")
+            each val in posts
+                li( class="post-item" )
+                    h2(class="post-item_title")
+                        a(href=val.url) #{val.title}
+                    p Created by #{val.user.username}
+        ul
+    div
+
+
+
