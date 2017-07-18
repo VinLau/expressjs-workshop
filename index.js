@@ -50,12 +50,12 @@ app.get('/calculator/:operation', function (req, res) { //http://127.0.0.1:3333/
    else {
       solNum = numOne * numTwo;
    }
-   res.send({
+   res.send(JSON.stringify({
       operation: req.params.operation,
       firstOperand: numOne,
       secondOperand: numTwo,
       solution: solNum
-   });
+   })); //or could use res.json(response)
 
 });
 
